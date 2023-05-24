@@ -1,0 +1,315 @@
+$cloud-container-width: 6000px; // 500px / 6000px;
+$animation-time: 120s;
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.container-fluid {
+    height: 100vh;
+    background-color: #2EB5E5;
+    overflow: hidden;
+}
+
+#sky {
+    height: 80vh;
+}
+
+#rainbow {
+    position: absolute;
+    bottom: -14%;
+    transform: skew(350deg, 11deg);
+    height: 100%;
+
+    img {
+        height: 100%;
+    }
+}
+
+#grass_background {
+    background-color: rgb(69, 247, 69);
+    height: 10vh;
+}
+#grass_foreground {
+    background-color: rgb(69, 247, 69);
+    height: 10vh;
+    z-index: 10;
+}
+
+.sky-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.cloud-container {
+    width: $cloud-container-width;
+    height: 10vh;
+    position: absolute;
+    top: 30vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+$cloud-circle-circum: 5vh;
+$cloud-modifier: 1.3;
+
+.cloud {
+    // animation: cloudMove $animation-time 1;
+    right: 0px;
+    // animation-timing-function: linear;
+    position: absolute;
+    // background: #FFFFFF;
+    height: 10vh;
+    width: 15vh;
+    // border-radius: 50%;
+    pointer-events: all;
+    cursor: pointer;
+    // box-shadow:
+    //       #FFFFFF ($cloud-circle-circum * 1.083) ($cloud-circle-circum * -.25) 0 ($cloud-circle-circum * -.083), 
+    //       #FFFFFF ($cloud-circle-circum * .4166) ($cloud-circle-circum * -.4166), 
+    //       #FFFFFF ($cloud-circle-circum * .5) ($cloud-circle-circum * .166), 
+    //       #FFFFFF $cloud-circle-circum ($cloud-circle-circum * .25) 0 ($cloud-circle-circum * -.166), 
+    //       #FFFFFF ($cloud-circle-circum * 1.25) ($cloud-circle-circum * .0833) 0 ($cloud-circle-circum * -.0833);
+    z-index: 1;
+    // border: 1px solid black;
+
+    span.cloud_0 {
+        width: 33.33% * $cloud-modifier;
+        height: 50% * $cloud-modifier;
+        left: 0 * $cloud-modifier;
+        top: 20% * $cloud-modifier;
+    }
+
+    span.cloud_1 {
+        width: 28% * $cloud-modifier;
+        height: 42% * $cloud-modifier;
+        left: 39% * $cloud-modifier;
+        top: 13% * $cloud-modifier;
+    }
+
+    span.cloud_2 {
+        width: 33.33% * $cloud-modifier;
+        height: 50% * $cloud-modifier;
+        left: 13% * $cloud-modifier;
+        top: 0% * $cloud-modifier;
+    }
+
+    span.cloud_3 {
+        width: 33.33% * $cloud-modifier;
+        height: 50% * $cloud-modifier;
+        left: 15% * $cloud-modifier;
+        top: 29% * $cloud-modifier;
+    }
+
+    span.cloud_4 {
+        width: 21.33% * $cloud-modifier;
+        height: 32% * $cloud-modifier;
+        left: 38% * $cloud-modifier;
+        top: 42% * $cloud-modifier;
+    }
+
+    span.cloud_5 {
+        width: 26.66% * $cloud-modifier;
+        height: 40% * $cloud-modifier;
+        left: 50% * $cloud-modifier;
+        top: 30% * $cloud-modifier;
+    }
+
+    .cloud_0, .cloud_1, .cloud_2, .cloud_3, .cloud_4, .cloud_5 {
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    span {
+        position: absolute;
+    }
+
+    span.rain {
+        // background: blue;
+        width: 90%;
+        height: 100vh;
+        z-index: 1;
+        top: 60%;
+        left: 5%;
+        pointer-events: none;
+        // opacity: .2;
+
+        .drop {
+            width: 2%;
+            height: 2%;
+            background-color: blue;
+            position: absolute;
+        }
+        
+        .drop_0 {
+            left: 0;
+            animation: rainDrop 1.5s linear 0s infinite normal ;
+        }
+        
+        .drop_1 {
+            left: 10%;
+            animation: rainDrop 1.5s linear .1s infinite normal ;
+        }
+        
+        .drop_2 {
+            left: 80%;
+            animation: rainDrop 1.5s linear .2s infinite normal ;
+        }
+        
+        .drop_3 {
+            left: 75%;
+            animation: rainDrop 1.5s linear .25s infinite normal ;
+        }
+        
+        .drop_4 {
+            left: 42%;
+            animation: rainDrop 1.5s linear .3s infinite normal ;
+        }
+        
+        .drop_5 {
+            left: 90%;
+            animation: rainDrop 1.5s linear .4s infinite normal ;
+        }
+        
+        .drop_6 {
+            left: 15%;
+            animation: rainDrop 1.5s linear .45s infinite normal ;
+        }
+        
+        .drop_7 {
+            left: 56%;
+            animation: rainDrop 1.5s linear .55s infinite normal ;
+        }
+        
+        .drop_8 {
+            left: 34%;
+            animation: rainDrop 1.5s linear .6s infinite normal ;
+        }
+        
+        .drop_9 {
+            left: 8%;
+            animation: rainDrop 1.5s linear .65s infinite normal ;
+        }
+        
+        .drop_10 {
+            left: 72%;
+            animation: rainDrop 1.5s linear .75s infinite normal ;
+        }
+        
+        .drop_11 {
+            left: 12%;
+            animation: rainDrop 1.5s linear .8s infinite normal ;
+        }
+        
+        .drop_12 {
+            left: 45%;
+            animation: rainDrop 1.5s linear .85s infinite normal ;
+        }
+        
+        .drop_13 {
+            left: 92%;
+            animation: rainDrop 1.5s linear .9s infinite normal ;
+        }
+        
+        .drop_14 {
+            left: 24%;
+            animation: rainDrop 1.5s linear 1s infinite normal ;
+        }
+        
+        .drop_15 {
+            left: 99%;
+            animation: rainDrop 1.5s linear 1.05s infinite normal ;
+        }
+        
+        .drop_16 {
+            left: 45%;
+            animation: rainDrop 1.5s linear 1.1s infinite normal ;
+        }
+        
+        .drop_17 {
+            left: 13%;
+            animation: rainDrop 1.5s linear 1.2s infinite normal ;
+        }
+        
+        .drop_18 {
+            left: 24%;
+            animation: rainDrop 1.5s linear 1.25s infinite normal ;
+        }
+        
+        .drop_19 {
+            left: 76%;
+            animation: rainDrop 1.5s linear 1.3s infinite normal ;
+        }
+        
+        .drop_20 {
+            left: 36%;
+            animation: rainDrop 1.5s linear 1.35s infinite normal ;
+        }
+        
+        .drop_21 {
+            left: 50%;
+            animation: rainDrop 1.5s linear 1.4s infinite normal ;
+        }
+        
+        .drop_22 {
+            left: 80%;
+            animation: rainDrop 1.5s linear 1.45s infinite normal ;
+        }
+    }
+
+    $lightning-color: #fcffc9;
+
+    div.lightning {
+        position: absolute;
+        left: 32%;
+        top: 28%;
+        height: 70vh;
+        width: 100%;
+        opacity: 1;
+        z-index: -1;
+        div:first-child {
+            position: absolute;
+            width: 13%;
+            height: 31%;
+            transform: skew(-10deg, -10deg);
+            background-color: $lightning-color;
+        }
+        div:nth-child(2) {
+            position: absolute;
+            top: 25%;
+            left: -10%;
+            width: 13%;
+            height: 28%;
+            transform: skew(-10deg, -10deg);
+            background-color: $lightning-color;
+        }
+        div:last-child {
+            position: absolute;
+            top: 46%;
+            left: -46%;
+            width: 13%;
+            height: 100%;
+            transform: skew(-10deg, -10deg);
+            background-color: $lightning-color;
+        }
+    }
+}
+
+@keyframes rainDrop {
+    from {
+        top: 0%;
+    }
+    to {
+        top: 100%;
+    }
+}
+
+
+
+
+@keyframes cloudMove {
+    from {
+        right: 0px;
+    }
+    to {
+        right: $cloud-container-width;
+    }
+}
